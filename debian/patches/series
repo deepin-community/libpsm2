@@ -1,0 +1,4 @@
+disable_makefile_git_versioning.patch
+fortify_source.patch
+remove_makefile_bashisms.patch
+uniontech_delete_arrays.patch

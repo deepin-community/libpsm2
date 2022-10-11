@@ -1,0 +1,101 @@
+libpsm2 (11.2.185-1) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian HPC team <debian-hpc@lists.debian.org>  Thu, 23 Jun 2022 14:26:06 +0800
+
+libpsm2 (11.2.185-1) unstable; urgency=medium
+
+  [ Debian Janitor <janitor@jelmer.uk> ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-
+    Browse.
+
+  [ Brian T. Smith ]
+  * New upstream version 11.2.185.
+    This addresses #957468. The owner requested to leave the bug open.
+  * Specify Rules-Requires-Root: no in d/control.
+  * New Standards-Version 4.5.0. No changes required.
+  * Bump debhelper from old 11 to 13.
+  * Add Forwarded: not-needed to d/patches/*.patch. Silence lintian
+    send-patch.
+  * Patch Makefile to remove bashisms.
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Tue, 08 Sep 2020 14:30:19 -0500
+
+libpsm2 (11.2.86-1) unstable; urgency=medium
+
+  * New upstream version 11.2.86.
+  * New Standards-Version 4.4.1. No changes required.
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Mon, 07 Oct 2019 21:16:49 -0500
+
+libpsm2 (11.2.78-2) unstable; urgency=medium
+
+  * New Standards-Version 4.4.0. No changes required.
+  * Specify Build-Depends debhelper >= 12 in d/control.
+  * Ignore library-not-linked-against-libc for libpsm2-2-compat.
+  * Specify Build-Depends-Package: libpsm2-dev in d/libpsm2-2.symbols.
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Fri, 06 Sep 2019 12:32:31 -0500
+
+libpsm2 (11.2.78-1) unstable; urgency=medium
+
+  * New upstream version 11.2.78.
+  * New Standards-Version 4.3.0. No changes required.
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Sat, 09 Feb 2019 16:57:54 -0600
+
+libpsm2 (11.2.68-4) unstable; urgency=medium
+
+  * Use upstream patch instead of timeout workaround added in
+    11.2.68-2 and 11.2.68-3.
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Fri, 30 Nov 2018 13:24:54 -0600
+
+libpsm2 (11.2.68-3) unstable; urgency=medium
+
+  * Change PSM2_INIT_WAIT_FOR_DEVICES environment var to PSM2_HAL_INIT_RETRY.
+  * Use psmi_getenv to access PSM2_HAL_INIT_RETRY environment var.
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Wed, 07 Nov 2018 14:11:02 -0600
+
+libpsm2 (11.2.68-2) unstable; urgency=medium
+
+  * Correct hang in psm2_init() when there is no hfi1 device
+    present. (Closes: #910485)
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Fri, 02 Nov 2018 16:26:42 -0500
+
+libpsm2 (11.2.68-1) unstable; urgency=medium
+
+  * New upstream version 11.2.68.
+  * Update Standards-Version to 4.2.1. No changes required.
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Sat, 29 Sep 2018 15:29:21 -0500
+
+libpsm2 (10.3.58-2) unstable; urgency=medium
+
+  * Fix gcc8 truncation error. (Closes: #906485)
+  * Update Standards-Version to 4.2.0.1. No changes required.
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Fri, 17 Aug 2018 17:31:09 -0500
+
+libpsm2 (10.3.58-1) unstable; urgency=medium
+
+  [ Brian T. Smith ]
+  * New upstream version 10.3.58.
+  * Update Standards-Version to 4.1.4.
+
+  [ Roland Fehrenbacher ]
+  * Update to debhelper compat 11
+  * Readd lintian override for libpsm2-2-compat
+    maintainer-script-should-not-use-update-alternatives-remove
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Thu, 14 Jun 2018 16:29:02 -0500
+
+libpsm2 (10.3-37-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #862313)
+
+ -- Brian T. Smith <bsmith@systemfabricworks.com>  Thu, 07 Dec 2017 12:33:43 -0600

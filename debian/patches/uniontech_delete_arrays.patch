@@ -1,0 +1,13 @@
+Index: libpsm2/include/linux-i386/sysdep.h
+===================================================================
+--- libpsm2.orig/include/linux-i386/sysdep.h
++++ libpsm2/include/linux-i386/sysdep.h
+@@ -140,7 +140,7 @@ static __inline__ uint32_t ips_cmpxchg(v
+ {
+ 	uint32_t prev;
+ 	struct xchg_dummy {
+-		uint32_t a[100];
++		uint32_t a;
+ 	};
+ 
+ 	asm volatile (LOCK_PREFIX "cmpxchgl %1,%2" : "=a"(prev)

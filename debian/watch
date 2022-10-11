@@ -1,0 +1,3 @@
+version=4
+opts=filenamemangle=s/.+\/PSM2_(\d\S+)\.tar\.gz/libpsm2-$1\.tar\.gz/ \
+  https://github.com/intel/opa-psm2/tags .*/PSM2_(\d\S+)\.tar\.gz
